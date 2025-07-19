@@ -16,35 +16,16 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnStartSecond"
+                android:id="@+id/btnInitDatabaseData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="72dp"
-                android:text="测试侧滑删除" />
+                android:text="获取用户账单" />
 
-            <Button
-                android:id="@+id/btnMvvm"
+            <TextView
+                android:id="@+id/tvResult"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="MVVM" />
-
-            <Button
-                android:id="@+id/btnNetwork"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="网络" />
-
-            <Button
-                android:id="@+id/btnDataStore"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DataStore存储" />
-
-            <Button
-                android:id="@+id/btnDatabase"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="数据库" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 

@@ -32,6 +32,11 @@ public class DemoMainActivity extends AbsBindingActivity<DemoMainActivityBinding
             //startActivity
             startActivity(new Intent(DemoMainActivity.this, DemoDataStoreActivity.class));
         });
+
+        mBinding.btnDatabase.setOnClickListener(v -> {
+            //startActivity
+            startActivity(new Intent(DemoMainActivity.this, DemoDatabaseActivity.class));
+        });
     }
 
     @Override
