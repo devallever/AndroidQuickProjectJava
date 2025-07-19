@@ -22,6 +22,11 @@ public class DemoMainActivity extends AbsBindingActivity<DemoMainActivityBinding
             //startActivity
             startActivity(new Intent(DemoMainActivity.this, DemoMvvmActivity.class));
         });
+
+        mBinding.btnNetwork.setOnClickListener(v -> {
+            //startActivity
+            startActivity(new Intent(DemoMainActivity.this, DemoNetworkActivity.class));
+        });
     }
 
     @Override
