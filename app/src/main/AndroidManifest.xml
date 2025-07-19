@@ -27,6 +27,7 @@
         <activity android:name="com.allever.java.project.quick.demo.SecondActivity" />
         <activity android:name="com.allever.java.project.quick.demo.DemoMvvmActivity" />
         <activity android:name="com.allever.java.project.quick.demo.DemoNetworkActivity" />
+        <activity android:name="com.allever.java.project.quick.demo.DemoDataStoreActivity" />
     </application>
 
 </manifest>
