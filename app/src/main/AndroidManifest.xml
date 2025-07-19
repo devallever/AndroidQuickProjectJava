@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.allever.java.project.quick.demo.SecondActivity" />
+        <activity android:name="com.allever.java.project.quick.demo.DemoMvvmActivity" />
     </application>
 
 </manifest>

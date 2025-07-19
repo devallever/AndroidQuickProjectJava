@@ -10,11 +10,16 @@ public abstract class AbsBindingActivity<VB extends ViewBinding> extends AbsActi
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        mBinding = getViewBinding();
         super.onCreate(savedInstanceState);
+        mBinding = getViewBinding();
         setContentView(mBinding.getRoot());
+        initView();
+        initData();
     }
 
     protected abstract VB getViewBinding();
+
+    protected abstract void initView();
+    protected abstract void initData();
 
 }

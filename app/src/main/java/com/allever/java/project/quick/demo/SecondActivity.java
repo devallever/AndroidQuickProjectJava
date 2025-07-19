@@ -1,9 +1,5 @@
 package com.allever.java.project.quick.demo;
 
-import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-
 import com.allever.java.project.quick.databinding.DemoActivitySecondBinding;
 import com.allever.java.project.quick.lib.ui.AbsBindingActivity;
 

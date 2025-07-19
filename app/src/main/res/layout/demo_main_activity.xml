@@ -22,6 +22,12 @@
                 android:layout_height="wrap_content"
                 android:text="测试侧滑删除" />
 
+            <Button
+                android:id="@+id/btnMvvm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MVVM" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

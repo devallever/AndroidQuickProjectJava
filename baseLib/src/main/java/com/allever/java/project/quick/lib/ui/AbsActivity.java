@@ -36,7 +36,7 @@ public abstract class AbsActivity extends AppCompatActivity implements BGASwipeB
             StatusBarCompat.translucentStatusBar(this, true);
         }
 
-        ////状态栏颜色
+        //状态栏颜色
         if (isDarkMode()) {
             StatusBarCompat.cancelLightStatusBar(this);
         } else {
@@ -52,9 +52,6 @@ public abstract class AbsActivity extends AppCompatActivity implements BGASwipeB
             //打开动画
             overridePendingTransition(R.anim.open_begin, R.anim.open_end);
         }
-
-        initView();
-        initData();
 
     }
 
@@ -183,9 +180,5 @@ public abstract class AbsActivity extends AppCompatActivity implements BGASwipeB
     protected boolean enableEnterAnim() {
         return true;
     }
-
-    protected abstract void initView();
-    protected abstract void initData();
-
 
 }

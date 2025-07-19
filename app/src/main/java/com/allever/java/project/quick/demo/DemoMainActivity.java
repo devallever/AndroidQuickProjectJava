@@ -2,12 +2,8 @@ package com.allever.java.project.quick.demo;
 
 
 import android.content.Intent;
-import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 
 import com.allever.java.project.quick.databinding.DemoMainActivityBinding;
-import com.allever.java.project.quick.lib.ui.AbsActivity;
 import com.allever.java.project.quick.lib.ui.AbsBindingActivity;
 
 public class DemoMainActivity extends AbsBindingActivity<DemoMainActivityBinding> {
@@ -21,6 +17,10 @@ public class DemoMainActivity extends AbsBindingActivity<DemoMainActivityBinding
         mBinding.btnStartSecond.setOnClickListener(v -> {
             //startActivity
             startActivity(new Intent(DemoMainActivity.this, SecondActivity.class));
+        });
+        mBinding.btnMvvm.setOnClickListener(v -> {
+            //startActivity
+            startActivity(new Intent(DemoMainActivity.this, DemoMvvmActivity.class));
         });
     }
 
