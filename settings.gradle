@@ -1,5 +1,15 @@
 pluginManagement {
     repositories {
+
+        maven {
+            url 'https://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven {
+            url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'
+        }
+        maven { url = uri('https://maven.aliyun.com/repository/google') };
+        maven { url = uri('https://maven.aliyun.com/repository/gradle-plugin') }
+
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -9,15 +19,28 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven { url 'https://jitpack.io' }
+        jcenter()
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        maven {
+            url 'https://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven {
+            url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'
+        }
+        maven { url = uri('https://maven.aliyun.com/repository/google') };
+        maven { url = uri('https://maven.aliyun.com/repository/gradle-plugin') }
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
+        jcenter()
     }
 }
 
 rootProject.name = "AndroidQuickProjectJava"
 include ':app'
+include ':baseLib'
