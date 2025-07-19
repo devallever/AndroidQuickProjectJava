@@ -16,41 +16,17 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnStartSecond"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="72dp"
-                android:text="测试侧滑删除" />
-
-            <Button
-                android:id="@+id/btnMvvm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="MVVM" />
-
-            <Button
-                android:id="@+id/btnNetwork"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="网络" />
-
-            <Button
-                android:id="@+id/btnDataStore"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DataStore存储" />
-
-            <Button
-                android:id="@+id/btnDatabase"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="数据库" />
-
-            <Button
                 android:id="@+id/btnPermission"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="权限" />
+                android:layout_marginTop="72dp"
+                android:text="请求权限" />
+
+            <Button
+                android:id="@+id/btnStoreMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="请求媒体图片存储权限" />
 
         </LinearLayout>
 
