@@ -3,6 +3,7 @@ package com.allever.java.project.quick.demo;
 
 import android.content.Intent;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.allever.java.project.quick.databinding.DemoMainActivityBinding;
@@ -47,6 +48,9 @@ public class DemoMainActivity extends DemoBaseActivity<DemoMainActivityBinding> 
         mData.add(new DemoItem("Mvvm Fragment", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, DemoMvvmFragmentActivity.class));
         }));
+        mData.add(new DemoItem("Ripple", "", () -> {
+            startActivity(new Intent(DemoMainActivity.this, DemoRippleActivity.class));
+        }));
 
         //adapter
         DemoItemAdapter adapter = new DemoItemAdapter(mData);
@@ -63,4 +67,6 @@ public class DemoMainActivity extends DemoBaseActivity<DemoMainActivityBinding> 
     protected void initData() {
 
     }
+
+
 }

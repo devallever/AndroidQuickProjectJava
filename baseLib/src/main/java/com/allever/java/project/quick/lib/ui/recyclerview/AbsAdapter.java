@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 
+import com.allever.java.project.quick.lib.ui.widget.RippleHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +43,7 @@ public abstract class AbsAdapter<D, VB extends ViewBinding> extends RecyclerView
         D item = data.get(position);
         VB binding = holder.getBinding();
         if (itemClickListener != null) {
-            binding.getRoot().setOnClickListener(v -> itemClickListener.onItemClick(item, position));
+            RippleHelper.setOnClickListener(binding.getRoot(), () -> itemClickListener.onItemClick(item, position));
         }
         if (itemLongClickListener != null) {
             binding.getRoot().setOnLongClickListener(v -> itemLongClickListener.onItemLongClick(item, position));
