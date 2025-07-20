@@ -4,9 +4,8 @@ import android.annotation.SuppressLint;
 
 import com.allever.java.project.quick.databinding.DemoActivityDataStoreBinding;
 import com.allever.java.project.quick.demo.datastore.DemoConfig;
-import com.allever.java.project.quick.lib.ui.AbsBindingActivity;
 
-public class DemoDataStoreActivity extends AbsBindingActivity<DemoActivityDataStoreBinding> {
+public class DemoDataStoreActivity extends DemoBaseActivity<DemoActivityDataStoreBinding> {
     @Override
     protected DemoActivityDataStoreBinding getViewBinding() {
         return DemoActivityDataStoreBinding.inflate(getLayoutInflater());
@@ -15,6 +14,7 @@ public class DemoDataStoreActivity extends AbsBindingActivity<DemoActivityDataSt
     @SuppressLint("SetTextI18n")
     @Override
     protected void initView() {
+        adaptStatusBar();
         mBinding.tvCounter.setText(DemoConfig.getCounter(0) + "");
         mBinding.btnCounter.setOnClickListener(v -> {
             DemoConfig.updateCounter(DemoConfig.getCounter(0) + 1);

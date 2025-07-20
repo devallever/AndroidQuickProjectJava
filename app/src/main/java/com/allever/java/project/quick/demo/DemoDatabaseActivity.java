@@ -8,13 +8,12 @@ import com.allever.java.project.quick.demo.database.entity.BillDishesRecordEntit
 import com.allever.java.project.quick.demo.database.entity.BillRecordEntity;
 import com.allever.java.project.quick.demo.database.entity.BillWithDishesRef;
 import com.allever.java.project.quick.demo.database.entity.DishesEntity;
-import com.allever.java.project.quick.lib.ui.AbsBindingActivity;
 import com.allever.java.project.quick.lib.util.GsonUtils;
 import com.allever.java.project.quick.lib.util.ThreadUtils;
 
 import java.util.List;
 
-public class DemoDatabaseActivity extends AbsBindingActivity<DemoActivityDatabaseBinding> {
+public class DemoDatabaseActivity extends DemoBaseActivity<DemoActivityDatabaseBinding> {
 
     private int userId = 0; // form 1 to 50
     @Override
@@ -24,6 +23,7 @@ public class DemoDatabaseActivity extends AbsBindingActivity<DemoActivityDatabas
 
     @Override
     protected void initView() {
+        adaptStatusBar();
         mBinding.btnInitDatabaseData.setOnClickListener(v -> {
             userId++;
             if (userId > 10) {

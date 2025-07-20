@@ -1,13 +1,12 @@
 package com.allever.java.project.quick.demo;
 
 import com.allever.java.project.quick.databinding.DemoActivitySecondBinding;
-import com.allever.java.project.quick.lib.ui.AbsBindingActivity;
 
-public class SecondActivity extends AbsBindingActivity<DemoActivitySecondBinding> {
+public class SecondActivity extends DemoBaseActivity<DemoActivitySecondBinding> {
 
     @Override
     protected void initView() {
-
+        adaptStatusBar();
     }
 
     @Override
@@ -20,9 +19,4 @@ public class SecondActivity extends AbsBindingActivity<DemoActivitySecondBinding
         return DemoActivitySecondBinding.inflate(getLayoutInflater());
     }
 
-
-    @Override
-    protected boolean isDarkMode() {
-        return false;
-    }
 }

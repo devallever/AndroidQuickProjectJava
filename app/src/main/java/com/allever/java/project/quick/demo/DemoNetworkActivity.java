@@ -2,10 +2,9 @@ package com.allever.java.project.quick.demo;
 
 import com.allever.java.project.quick.databinding.DemoActivityNetworkBinding;
 import com.allever.java.project.quick.demo.network.NetworkRepository;
-import com.allever.java.project.quick.lib.ui.AbsBindingActivity;
 import com.allever.java.project.quick.lib.util.GsonUtils;
 
-public class DemoNetworkActivity extends AbsBindingActivity<DemoActivityNetworkBinding> {
+public class DemoNetworkActivity extends DemoBaseActivity<DemoActivityNetworkBinding> {
     @Override
     protected DemoActivityNetworkBinding getViewBinding() {
         return DemoActivityNetworkBinding.inflate(getLayoutInflater());
@@ -13,6 +12,7 @@ public class DemoNetworkActivity extends AbsBindingActivity<DemoActivityNetworkB
 
     @Override
     protected void initView() {
+        adaptStatusBar();
         mBinding.btnNetwork.setOnClickListener(v -> {
             handleNetwork();
         });

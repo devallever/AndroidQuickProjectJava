@@ -4,9 +4,8 @@ package com.allever.java.project.quick.demo;
 import android.content.Intent;
 
 import com.allever.java.project.quick.databinding.DemoMainActivityBinding;
-import com.allever.java.project.quick.lib.ui.AbsBindingActivity;
 
-public class DemoMainActivity extends AbsBindingActivity<DemoMainActivityBinding> {
+public class DemoMainActivity extends DemoBaseActivity<DemoMainActivityBinding> {
     @Override
     protected DemoMainActivityBinding getViewBinding() {
         return DemoMainActivityBinding.inflate(getLayoutInflater());
@@ -14,6 +13,7 @@ public class DemoMainActivity extends AbsBindingActivity<DemoMainActivityBinding
 
     @Override
     protected void initView() {
+        adaptStatusBar();
         mBinding.btnStartSecond.setOnClickListener(v -> {
             //startActivity
             startActivity(new Intent(DemoMainActivity.this, SecondActivity.class));
@@ -41,15 +41,14 @@ public class DemoMainActivity extends AbsBindingActivity<DemoMainActivityBinding
         mBinding.btnPermission.setOnClickListener(v -> {
             startActivity(new Intent(DemoMainActivity.this, DemoPermissionActivity.class));
         });
+
+        mBinding.btnRecyclerView.setOnClickListener(v -> {
+            startActivity(new Intent(DemoMainActivity.this, DemoRecyclerViewActivity.class));
+        });
     }
 
     @Override
     protected void initData() {
 
-    }
-
-    @Override
-    protected boolean isDarkMode() {
-        return false;
     }
 }

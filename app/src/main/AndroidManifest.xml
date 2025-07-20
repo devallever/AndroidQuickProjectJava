@@ -39,6 +39,7 @@
         <activity android:name="com.allever.java.project.quick.demo.DemoDataStoreActivity" />
         <activity android:name="com.allever.java.project.quick.demo.DemoDatabaseActivity" />
         <activity android:name="com.allever.java.project.quick.demo.DemoPermissionActivity" />
+        <activity android:name="com.allever.java.project.quick.demo.DemoRecyclerViewActivity" />
     </application>
 
 </manifest>

@@ -7,10 +7,9 @@ import androidx.annotation.NonNull;
 
 import com.allever.java.project.quick.databinding.DemoActivityPermissionBinding;
 import com.allever.java.project.quick.lib.permission.PermissionUtils;
-import com.allever.java.project.quick.lib.ui.AbsBindingActivity;
 import com.allever.java.project.quick.lib.util.ToastUtils;
 
-public class DemoPermissionActivity extends AbsBindingActivity<DemoActivityPermissionBinding> {
+public class DemoPermissionActivity extends DemoBaseActivity<DemoActivityPermissionBinding> {
     @Override
     protected DemoActivityPermissionBinding getViewBinding() {
         return DemoActivityPermissionBinding.inflate(getLayoutInflater());
@@ -18,6 +17,7 @@ public class DemoPermissionActivity extends AbsBindingActivity<DemoActivityPermi
 
     @Override
     protected void initView() {
+        adaptStatusBar();
         mBinding.btnPermission.setOnClickListener(v -> {
             PermissionUtils.requestPermission(this, Manifest.permission.CAMERA);
         });
