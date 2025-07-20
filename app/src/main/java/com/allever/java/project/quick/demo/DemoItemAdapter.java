@@ -1,6 +1,7 @@
 package com.allever.java.project.quick.demo;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.allever.java.project.quick.databinding.DemoItemRvBinding;
@@ -21,6 +22,11 @@ public class DemoItemAdapter extends AbsAdapter<DemoItem, DemoItemRvBinding> {
     @Override
     public void onBindingViewHolder(DemoItem item, DemoItemRvBinding binding, int position) {
         binding.tvTitle.setText(item.getTitle());
+        if (item.getContent().isEmpty()) {
+            binding.tvDesc.setVisibility(View.GONE);
+        } else {
+            binding.tvDesc.setVisibility(View.VISIBLE);
+        }
         binding.tvDesc.setText(item.getContent());
     }
 }

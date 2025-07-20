@@ -16,7 +16,7 @@ public class DemoRecyclerViewActivity extends DemoBaseActivity<DemoActivityRecyc
         adaptStatusBar();
         List<DemoItem> data = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-            DemoItem item = new DemoItem( "title" + i, "content" + i);
+            DemoItem item = new DemoItem( "title" + i, "content" + i, null);
             data.add(item);
         }
         DemoItemAdapter adapter = new DemoItemAdapter(data);

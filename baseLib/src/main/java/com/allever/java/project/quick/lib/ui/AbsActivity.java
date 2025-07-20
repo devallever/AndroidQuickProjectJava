@@ -7,6 +7,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.allever.java.project.quick.lib.R;
 import com.allever.java.project.quick.lib.helper.ActivityHelper;
@@ -157,6 +158,10 @@ public abstract class AbsActivity extends AppCompatActivity implements BGASwipeB
             ToastUtils.show("再按一次退出");
             firstPressedBackTime = System.currentTimeMillis();
         }
+    }
+
+    protected void addFragment(int layoutId, Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().add(layoutId, fragment).commit();
     }
 
     private boolean enableExitAnim() {

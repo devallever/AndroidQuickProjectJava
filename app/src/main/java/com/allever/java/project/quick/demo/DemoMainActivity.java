@@ -3,9 +3,15 @@ package com.allever.java.project.quick.demo;
 
 import android.content.Intent;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.allever.java.project.quick.databinding.DemoMainActivityBinding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DemoMainActivity extends DemoBaseActivity<DemoMainActivityBinding> {
+    private List<DemoItem> mData = new ArrayList<>();
     @Override
     protected DemoMainActivityBinding getViewBinding() {
         return DemoMainActivityBinding.inflate(getLayoutInflater());
@@ -14,36 +20,42 @@ public class DemoMainActivity extends DemoBaseActivity<DemoMainActivityBinding> 
     @Override
     protected void initView() {
         adaptStatusBar();
-        mBinding.btnStartSecond.setOnClickListener(v -> {
-            //startActivity
+        mData.add(new DemoItem("测试滑动删除", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, SecondActivity.class));
-        });
-        mBinding.btnMvvm.setOnClickListener(v -> {
-            //startActivity
+        }));
+        mData.add(new DemoItem("MVVM", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, DemoMvvmActivity.class));
-        });
-
-        mBinding.btnNetwork.setOnClickListener(v -> {
-            //startActivity
+        }));
+        mData.add(new DemoItem("网络", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, DemoNetworkActivity.class));
-        });
-
-        mBinding.btnDataStore.setOnClickListener(v -> {
-            //startActivity
+        }));
+        mData.add(new DemoItem("DataStore", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, DemoDataStoreActivity.class));
-        });
-
-        mBinding.btnDatabase.setOnClickListener(v -> {
-            //startActivity
+        }));
+        mData.add(new DemoItem("数据库", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, DemoDatabaseActivity.class));
-        });
-
-        mBinding.btnPermission.setOnClickListener(v -> {
+        }));
+        mData.add(new DemoItem("权限", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, DemoPermissionActivity.class));
-        });
-
-        mBinding.btnRecyclerView.setOnClickListener(v -> {
+        }));
+        mData.add(new DemoItem("RecyclerView", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, DemoRecyclerViewActivity.class));
+        }));
+        mData.add(new DemoItem("Fragment", "", () -> {
+            startActivity(new Intent(DemoMainActivity.this, DemoFragmentActivity.class));
+        }));
+        mData.add(new DemoItem("Mvvm Fragment", "", () -> {
+            startActivity(new Intent(DemoMainActivity.this, DemoMvvmFragmentActivity.class));
+        }));
+
+        //adapter
+        DemoItemAdapter adapter = new DemoItemAdapter(mData);
+        mBinding.rvFunc.setLayoutManager(new LinearLayoutManager(this));
+        mBinding.rvFunc.setAdapter(adapter);
+        adapter.setItemClickListener((item, position) -> {
+            if (item.getAction() != null) {
+                item.getAction().run();
+            }
         });
     }
 
