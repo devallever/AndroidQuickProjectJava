@@ -1,4 +1,4 @@
-package com.allever.java.project.quick;
+package com.allever.java.project.quick.demo;
 
 import android.view.ViewGroup;
 

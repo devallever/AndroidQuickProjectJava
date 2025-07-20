@@ -2,8 +2,8 @@ package com.allever.java.project.quick.demo;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.allever.java.project.quick.databinding.DemoMainActivityBinding;
@@ -12,7 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DemoMainActivity extends DemoBaseActivity<DemoMainActivityBinding> {
-    private List<DemoItem> mData = new ArrayList<>();
+    private final List<DemoItem> mData = new ArrayList<>();
+
     @Override
     protected DemoMainActivityBinding getViewBinding() {
         return DemoMainActivityBinding.inflate(getLayoutInflater());
@@ -43,13 +44,23 @@ public class DemoMainActivity extends DemoBaseActivity<DemoMainActivityBinding> 
             startActivity(new Intent(DemoMainActivity.this, DemoRecyclerViewActivity.class));
         }));
         mData.add(new DemoItem("Fragment", "", () -> {
-            startActivity(new Intent(DemoMainActivity.this, DemoFragmentActivity.class));
+            Bundle bundle = new Bundle();
+            bundle.putString("userName", "Allever");
+            DemoFragmentActivity.start(DemoMainActivity.this, DemoContentFragment.class, bundle);
         }));
         mData.add(new DemoItem("Mvvm Fragment", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, DemoMvvmFragmentActivity.class));
         }));
         mData.add(new DemoItem("Ripple", "", () -> {
             startActivity(new Intent(DemoMainActivity.this, DemoRippleActivity.class));
+        }));
+        mData.add(new DemoItem("BaseTitleActivity", "", () -> {
+            startActivity(new Intent(DemoMainActivity.this, DemoMyTitleActivity.class));
+        }));
+        mData.add(new DemoItem("TitleFragmentActivity", "", () -> {
+            Bundle bundle = new Bundle();
+            bundle.putString("userName", "Allever");
+            DemoFragmentTitleActivity.start(DemoMainActivity.this, DemoContentFragment.class, "TitleFragmentActivity", bundle);
         }));
 
         //adapter

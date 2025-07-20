@@ -43,6 +43,8 @@
         <activity android:name="com.allever.java.project.quick.demo.DemoFragmentActivity" />
         <activity android:name="com.allever.java.project.quick.demo.DemoMvvmFragmentActivity" />
         <activity android:name="com.allever.java.project.quick.demo.DemoRippleActivity" />
+        <activity android:name="com.allever.java.project.quick.demo.DemoMyTitleActivity" />
+        <activity android:name="com.allever.java.project.quick.demo.DemoFragmentTitleActivity" />
     </application>
 
 </manifest>
