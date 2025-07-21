@@ -1,9 +1,10 @@
-package com.allever.java.project.quick.demo;
+package com.allever.java.project.quick.demo.fragment;
 
 import android.os.Bundle;
 import android.view.ViewGroup;
 
 import com.allever.java.project.quick.databinding.DemoFragmentContentBinding;
+import com.allever.java.project.quick.demo.base.DemoBaseFragment;
 
 public class DemoContentFragment extends DemoBaseFragment<DemoFragmentContentBinding> {
     @Override

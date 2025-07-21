@@ -29,7 +29,7 @@ public class NetworkConfig {
         for (Interceptor interceptor : builder.interceptors) {
             okHttpClientBuilder.addInterceptor(interceptor);
         }
-        okHttpClientBuilder.addInterceptor(new LoggerrInterceptor());
+        okHttpClientBuilder.addInterceptor(new LoggerInterceptor());
         retrofit = new Retrofit.Builder()
                 .client(okHttpClientBuilder.build())
                 .addConverterFactory(GsonConverterFactory.create())

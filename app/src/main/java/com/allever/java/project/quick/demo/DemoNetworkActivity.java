@@ -1,6 +1,7 @@
 package com.allever.java.project.quick.demo;
 
 import com.allever.java.project.quick.databinding.DemoActivityNetworkBinding;
+import com.allever.java.project.quick.demo.base.DemoBaseActivity;
 import com.allever.java.project.quick.demo.network.NetworkRepository;
 import com.allever.java.project.quick.lib.util.GsonUtils;
 

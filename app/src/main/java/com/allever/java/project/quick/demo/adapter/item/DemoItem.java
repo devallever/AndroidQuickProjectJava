@@ -1,4 +1,4 @@
-package com.allever.java.project.quick.demo;
+package com.allever.java.project.quick.demo.adapter.item;
 
 public class DemoItem {
     //title

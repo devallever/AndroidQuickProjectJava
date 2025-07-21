@@ -1,4 +1,4 @@
-package com.allever.java.project.quick.demo;
+package com.allever.java.project.quick.demo.base;
 
 import android.app.Activity;
 import android.content.Intent;

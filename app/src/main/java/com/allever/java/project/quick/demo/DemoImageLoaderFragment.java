@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 
 import com.allever.java.project.quick.R;
 import com.allever.java.project.quick.databinding.DemoPageImageLoaderBinding;
+import com.allever.java.project.quick.demo.base.DemoBaseFragment;
 import com.allever.java.project.quick.lib.image.ImageLoader;
 import com.allever.java.project.quick.lib.util.DisplayUtils;
 

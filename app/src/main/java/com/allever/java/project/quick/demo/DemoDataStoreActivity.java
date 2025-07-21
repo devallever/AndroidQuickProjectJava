@@ -3,6 +3,7 @@ package com.allever.java.project.quick.demo;
 import android.annotation.SuppressLint;
 
 import com.allever.java.project.quick.databinding.DemoActivityDataStoreBinding;
+import com.allever.java.project.quick.demo.base.DemoBaseActivity;
 import com.allever.java.project.quick.demo.datastore.DemoConfig;
 
 public class DemoDataStoreActivity extends DemoBaseActivity<DemoActivityDataStoreBinding> {

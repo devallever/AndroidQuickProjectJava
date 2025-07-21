@@ -1,10 +1,11 @@
-package com.allever.java.project.quick.demo;
+package com.allever.java.project.quick.demo.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.allever.java.project.quick.databinding.DemoItemRvBinding;
+import com.allever.java.project.quick.demo.adapter.item.DemoItem;
 import com.allever.java.project.quick.lib.ui.recyclerview.AbsAdapter;
 
 import java.util.List;

@@ -1,8 +1,9 @@
-package com.allever.java.project.quick.demo;
+package com.allever.java.project.quick.demo.fragment;
 
 import android.view.ViewGroup;
 
 import com.allever.java.project.quick.databinding.DemoFragmentMvvmBinding;
+import com.allever.java.project.quick.demo.DemoViewModel;
 import com.allever.java.project.quick.lib.mvvm.AbsMvvmFragment;
 
 public class DemoMvvmFragment extends AbsMvvmFragment<DemoFragmentMvvmBinding, DemoViewModel> {

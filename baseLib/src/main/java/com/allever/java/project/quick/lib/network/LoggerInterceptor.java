@@ -19,8 +19,8 @@ import okio.Buffer;
 /**
  * @author allever
  */
-public class LoggerrInterceptor implements Interceptor {
-    private static final String TAG = LoggerrInterceptor.class.getSimpleName();
+public class LoggerInterceptor implements Interceptor {
+    private static final String TAG = LoggerInterceptor.class.getSimpleName();
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request originalRequest = chain.request();

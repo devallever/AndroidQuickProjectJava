@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import com.allever.java.project.quick.databinding.DemoActivityFragmentBinding;
+import com.allever.java.project.quick.demo.base.DemoBaseActivity;
 
 public class DemoFragmentActivity extends DemoBaseActivity<DemoActivityFragmentBinding> {
 

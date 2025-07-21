@@ -6,6 +6,7 @@ import android.Manifest;
 import androidx.annotation.NonNull;
 
 import com.allever.java.project.quick.databinding.DemoActivityPermissionBinding;
+import com.allever.java.project.quick.demo.base.DemoBaseActivity;
 import com.allever.java.project.quick.lib.permission.PermissionUtils;
 import com.allever.java.project.quick.lib.util.ToastUtils;
 

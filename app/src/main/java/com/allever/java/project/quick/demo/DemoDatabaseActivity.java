@@ -1,6 +1,7 @@
 package com.allever.java.project.quick.demo;
 
 import com.allever.java.project.quick.databinding.DemoActivityDatabaseBinding;
+import com.allever.java.project.quick.demo.base.DemoBaseActivity;
 import com.allever.java.project.quick.demo.database.DemoDBRepository;
 import com.allever.java.project.quick.demo.database.DemoPayType;
 import com.allever.java.project.quick.demo.database.DemoTimeUtils;

@@ -1,4 +1,4 @@
-package com.allever.java.project.quick.demo;
+package com.allever.java.project.quick.demo.base;
 
 import android.os.Bundle;
 import android.view.Gravity;

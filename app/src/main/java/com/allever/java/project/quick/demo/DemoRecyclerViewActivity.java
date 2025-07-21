@@ -3,13 +3,16 @@ package com.allever.java.project.quick.demo;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.allever.java.project.quick.databinding.DemoActivityRecyclerViewBinding;
+import com.allever.java.project.quick.demo.adapter.DemoItemAdapter;
+import com.allever.java.project.quick.demo.adapter.item.DemoItem;
+import com.allever.java.project.quick.demo.base.DemoBaseActivity;
 import com.allever.java.project.quick.lib.util.GsonUtils;
 import com.allever.java.project.quick.lib.util.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DemoRecyclerViewActivity extends DemoBaseActivity<DemoActivityRecyclerViewBinding>{
+public class DemoRecyclerViewActivity extends DemoBaseActivity<DemoActivityRecyclerViewBinding> {
 
     @Override
     protected void initView() {

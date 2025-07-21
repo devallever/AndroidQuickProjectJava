@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import com.allever.java.project.quick.R;
 import com.allever.java.project.quick.databinding.DemoActivityMyTitleBinding;
 import com.allever.java.project.quick.demo.adapter.item.DemoMenuItem;
+import com.allever.java.project.quick.demo.base.DemoBaseTitleActivity;
 import com.allever.java.project.quick.lib.util.ToastUtils;
 
 import java.util.ArrayList;

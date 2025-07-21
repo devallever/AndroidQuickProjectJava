@@ -44,7 +44,7 @@
         <activity android:name="com.allever.java.project.quick.demo.DemoMvvmFragmentActivity" />
         <activity android:name="com.allever.java.project.quick.demo.DemoRippleActivity" />
         <activity android:name="com.allever.java.project.quick.demo.DemoMyTitleActivity" />
-        <activity android:name="com.allever.java.project.quick.demo.DemoFragmentTitleActivity" />
+        <activity android:name="com.allever.java.project.quick.demo.base.DemoFragmentTitleActivity" />
     </application>
 
 </manifest>
