@@ -62,6 +62,9 @@ public class DemoMainActivity extends DemoBaseActivity<DemoMainActivityBinding> 
             bundle.putString("userName", "Allever");
             DemoFragmentTitleActivity.start(DemoMainActivity.this, DemoContentFragment.class, "TitleFragmentActivity", bundle);
         }));
+        mData.add(new DemoItem("ImageLoader", "", () -> {
+            DemoFragmentTitleActivity.start(DemoMainActivity.this, DemoImageLoaderFragment.class, "ImageLoader", null);
+        }));
 
         //adapter
         DemoItemAdapter adapter = new DemoItemAdapter(mData);

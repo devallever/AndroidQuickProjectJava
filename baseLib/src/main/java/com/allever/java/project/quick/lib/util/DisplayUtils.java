@@ -12,4 +12,8 @@ public class DisplayUtils {
     public static int getScreenWidth(Context context) {
         return getDisplayMetrics(context).widthPixels;
     }
+
+    public static int dp2px(Context context, float value) {
+        return (int) (getDisplayMetrics(context).density * value + 0.5f);
+    }
 }
