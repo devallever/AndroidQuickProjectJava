@@ -8,7 +8,6 @@ import com.allever.java.project.quick.demo.adapter.item.DemoMenuItem;
 import com.allever.java.project.quick.lib.util.ToastUtils;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class DemoMyTitleActivity extends DemoBaseTitleActivity<DemoActivityMyTitleBinding> {
@@ -21,13 +20,13 @@ public class DemoMyTitleActivity extends DemoBaseTitleActivity<DemoActivityMyTit
     protected List<DemoMenuItem> getMenuActionList() {
         return new ArrayList<>() {
             {
-                add(new DemoMenuItem(R.drawable.ic_menu_power, () -> {
+                add(new DemoMenuItem(R.drawable.demo_ic_menu_power, () -> {
                     ToastUtils.show("power");
                 }));
-                add(new DemoMenuItem(R.drawable.ic_menu_printer, () -> {
+                add(new DemoMenuItem(R.drawable.demo_ic_menu_printer, () -> {
                     ToastUtils.show("Printer");
                 }));
-                add(new DemoMenuItem(R.drawable.ic_menu_setting, () -> {
+                add(new DemoMenuItem(R.drawable.demo_ic_menu_setting, () -> {
                     ToastUtils.show("Setting");
                 }));
             }
@@ -43,5 +42,10 @@ public class DemoMyTitleActivity extends DemoBaseTitleActivity<DemoActivityMyTit
     @Override
     protected void initData() {
 
+    }
+
+    @Override
+    protected void initTopBar() {
+//        initTopBar(this.getClass().getSimpleName(), true,  false, false, true);
     }
 }

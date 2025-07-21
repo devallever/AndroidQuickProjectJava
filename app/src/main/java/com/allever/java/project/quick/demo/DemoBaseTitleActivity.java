@@ -1,6 +1,7 @@
 package com.allever.java.project.quick.demo;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -30,6 +31,7 @@ public abstract class DemoBaseTitleActivity<CVB extends ViewBinding> extends Dem
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         mContentBinding = getContentViewBinding();
         super.onCreate(savedInstanceState);
+        initTopBar();
         adaptStatusBar(mBinding.topBar);
         RippleHelper.setOnClickListener(mBinding.ivBack, () -> onBackPressed());
         mBinding.contentView.addView(mContentBinding.getRoot());
@@ -47,4 +49,47 @@ public abstract class DemoBaseTitleActivity<CVB extends ViewBinding> extends Dem
     abstract protected CVB getContentViewBinding();
 
     abstract protected List<DemoMenuItem> getMenuActionList();
+
+    abstract protected void initTopBar();
+
+    protected void initTopBar(String title, boolean isCenter, boolean enableBack, boolean enableMenu, boolean enableTopBar){
+        mBinding.tvTitle.setText(title);
+        if (isCenter) {
+            mBinding.tvTitle.setGravity(Gravity.CENTER);
+        } else {
+            mBinding.tvTitle.setGravity(Gravity.START);
+        }
+        if (enableBack) {
+            mBinding.ivBack.setVisibility(View.VISIBLE);
+        } else {
+            mBinding.ivBack.setVisibility(View.GONE);
+        }
+        if (enableMenu) {
+            mBinding.rvMenu.setVisibility(View.VISIBLE);
+        } else {
+            mBinding.rvMenu.setVisibility(View.GONE);
+        }
+        if (enableTopBar) {
+            mBinding.topBarContainer.setVisibility(View.VISIBLE);
+        } else {
+            mBinding.topBarContainer.setVisibility(View.GONE);
+        }
+    }
+
+    protected boolean enableBackAction() {
+        return true;
+    }
+
+    protected boolean enableMenu() {
+        return true;
+    }
+
+    protected boolean enableTopBar() {
+        return true;
+    }
+
+    protected int titleGravity() {
+        return Gravity.START;
+    }
+
 }
