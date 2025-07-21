@@ -52,6 +52,22 @@ public abstract class DemoBaseTitleActivity<CVB extends ViewBinding> extends Dem
 
     abstract protected void initTopBar();
 
+    protected void initBackTitleBar(String title) {
+        initTopBar(title, false, true, false, true);
+    }
+
+    protected void initCenterTitleBar(String title) {
+        initTopBar(title, true, false, false, true);
+    }
+
+    protected void disableTopBar() {
+        initTopBar("", false, false, false, false);
+    }
+
+    protected void initBackMenuTitleBar(String title) {
+        initTopBar(title, false, true, true, true);
+    }
+
     protected void initTopBar(String title, boolean isCenter, boolean enableBack, boolean enableMenu, boolean enableTopBar){
         mBinding.tvTitle.setText(title);
         if (isCenter) {

@@ -36,7 +36,6 @@ public class DemoMyTitleActivity extends DemoBaseTitleActivity<DemoActivityMyTit
     @SuppressLint("SetTextI18n")
     @Override
     protected void initView() {
-        adaptStatusBar(mBinding.topBar);
     }
 
     @Override
@@ -46,6 +45,11 @@ public class DemoMyTitleActivity extends DemoBaseTitleActivity<DemoActivityMyTit
 
     @Override
     protected void initTopBar() {
-//        initTopBar(this.getClass().getSimpleName(), true,  false, false, true);
+//        initTopBar(this.getClass().getSimpleName(), false,  true, true, true);
+//        initBackTitleBar(this.getClass().getSimpleName());
+//        initCenterTitleBar(this.getClass().getSimpleName());
+        initBackMenuTitleBar(this.getClass().getSimpleName());
+//        disableTopBar();
+//        adaptStatusBar(mContentBinding.tvContent);
     }
 }
