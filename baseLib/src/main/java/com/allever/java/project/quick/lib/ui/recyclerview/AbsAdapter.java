@@ -23,6 +23,12 @@ public abstract class AbsAdapter<D, VB extends ViewBinding> extends RecyclerView
         this.data = data;
     }
 
+    public void setData(List<D> data) {
+        this.data.clear();
+        this.data.addAll(data);
+        notifyDataSetChanged();
+    }
+
 
     public void setItemClickListener(ItemClickListener<D> itemClickListener) {
         this.itemClickListener = itemClickListener;
@@ -59,4 +65,8 @@ public abstract class AbsAdapter<D, VB extends ViewBinding> extends RecyclerView
     public abstract VB getBinding(ViewGroup parent);
 
     public abstract void onBindingViewHolder(D item, VB binding, int position);
+
+    public List<D> getData() {
+        return new ArrayList<>(data);
+    }
 }

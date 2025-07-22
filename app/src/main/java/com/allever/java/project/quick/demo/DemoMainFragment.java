@@ -13,8 +13,8 @@ import com.allever.java.project.quick.demo.adapter.item.DemoItem;
 import com.allever.java.project.quick.demo.base.DemoBaseFragment;
 import com.allever.java.project.quick.demo.base.DemoFragmentTitleActivity;
 import com.allever.java.project.quick.demo.fragment.DemoContentFragment;
+import com.allever.java.project.quick.demo.fragment.DemoFuncListFragment;
 import com.allever.java.project.quick.demo.fragment.DemoMyTabFragment;
-import com.allever.java.project.quick.demo.fragment.DemoTabFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +74,9 @@ public class DemoMainFragment extends DemoBaseFragment<DemoMainFragmentBinding> 
         }));
         mData.add(new DemoItem("TabFragment", "TabLayout + ViewPager2\ncom.github.li-xiaojun:FlycoTabLayout:2.0.6", () -> {
             DemoFragmentTitleActivity.start(requireActivity(), DemoMyTabFragment.class, "TabViewPager", null);
+        }));
+        mData.add(new DemoItem("ListFragment", "", () -> {
+            DemoFragmentTitleActivity.start(requireActivity(), DemoFuncListFragment.class, "ListFragment", null);
         }));
 
         //adapter

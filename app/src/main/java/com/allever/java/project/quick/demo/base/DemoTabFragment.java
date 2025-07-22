@@ -1,11 +1,10 @@
-package com.allever.java.project.quick.demo.fragment;
+package com.allever.java.project.quick.demo.base;
 
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
 import com.allever.java.project.quick.databinding.DemoFragmentTabBinding;
-import com.allever.java.project.quick.demo.base.DemoBaseFragment;
 import com.allever.java.project.quick.lib.viewpager.Pager2Adapter;
 import com.allever.java.project.quick.lib.viewpager.ViewPagerUtils;
 

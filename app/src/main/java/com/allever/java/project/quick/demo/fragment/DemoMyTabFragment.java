@@ -3,10 +3,12 @@ package com.allever.java.project.quick.demo.fragment;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.allever.java.project.quick.demo.base.DemoTabFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class DemoMyTabFragment extends DemoTabFragment{
+public class DemoMyTabFragment extends DemoTabFragment {
     @NonNull
     @Override
     public ArrayList<String> getTabTitles() {
